@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="textColorPrimary">#263238</color>
+    <color name="textColorSecondary">#37474F</color>
+    <color name="colorPrimary">#FFF5F5F5</color>
+    <color name="buttonColor">#FFFAFAFA</color>
+    <color name="colorAccent">#FF6C63FF</color>
+    <color name="windowBackground">#FFFFFFFF</color>
+    <color name="colorCheckbox">#FFF7F7F7</color>
+    <color name="colorEdgeEffect">@android:color/black</color>
+    <color name="colorCheckboxChecked">#FF54A05F</color>
+    <color name="dialogButtonInfo">#FF54A05F</color>
+    <color name="dialogButtonClose">#FF54A05F</color>
+    <color name="linkColor">#0E86D4</color>
+</resources>

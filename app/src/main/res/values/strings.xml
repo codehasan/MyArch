@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translateable="false">My Arch</string>
+    <string name="close">Close</string>
+    <string name="check">Check</string>
+    <string name="about">About Us</string>
+    <string name="about_description" formatted="false">This application is developed and maintained by</string>
+    <string name="icons_by">All icons used in this app are taken from</string>
+    <string name="thnaks">Thank your for using %s.</string>
+    <string name="more_info">More Info</string>
+    <string name="checkInfo">Click on \"Check\" button to see which ABIs are supported in your device</string>
+    <string name="armeabi_info">This ABI is for ARM-based CPUs that support at least the ARMv5TE instruction set. This is a very old version, the lack of hardware support for floating-point calculations, there are performance bottlenecks when you need a lot of computing\n\nSupported ABIs:\n● armeabi</string>
+    <string name="mips64_info">This ABI is for MIPS64 R6. It is rarely used in mobile phones, can be ignored\n\nSupported ABIs:\n● mips64\n● mips</string>
+    <string name="mips_info">This ABI is for MIPS-based CPUs that support at least the MIPS32r1 instruction set. It is rarely used in mobile phones, can be ignored\n\nSupported ABIs:\n● mips</string>
+    <string name="v7a_info">This ABI is for 32-bit ARM-based CPUs which extends armeabi to include several CPU instruction set extensions\n\nSupported ABIs:\n● armeabi\n● armeabi-v7a</string>
+    <string name="v8a_info">This ABI is for ARMv8-A based CPUs, which support the 64-bit AArch64 architecture. It includes the Advanced SIMD (Neon) architecture extensions\n\nSupported ABIs:\n● armeabi-v7a\n● armeabi\n● arm64-v8a</string>
+    <string name="x86_64_info">This ABI is for CPUs supporting the instruction set commonly referred to as \"x86-64\". This intel 64-bits ABI is generally used for plates\n\nSupported ABIs:\n● x86\n● x86_64</string>
+    <string name="x86_info">This ABI is for CPUs supporting the instruction set commonly known as \"x86\", \"i386\" or \"IA-32\". This intel 32-bits ABI is generally used for plates\n\nSupported ABIs:\n● x86\n● armeabi (some performance loss)</string>
+</resources>

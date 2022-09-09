@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BaseTheme" parent="@android:style/Theme.Material.Light">
+    </style>
+    <style name="AppTheme" parent="@style/BaseTheme">
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowLightStatusBar">@bool/light_statusBar</item>
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimary</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:colorControlNormal">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/windowBackground</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:navigationBarColor">@color/windowBackground</item>
+		<item name="android:colorEdgeEffect">@color/colorEdgeEffect</item>
+	</style>
+</resources>
