@@ -1,31 +1,25 @@
 buildscript {
-    ext.build_gradle_version = '3.6.1'
-
     repositories {
-        maven { url 'https://maven.aliyun.com/repository/public/' }
-        maven { url 'https://maven.aliyun.com/repository/google/' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
-        maven { url 'https://dl.bintray.com/ppartisan/maven/' }
-        maven { url "https://clojars.org/repo/" }
-        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
         google()
         mavenLocal()
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:$build_gradle_version"
-        
+        classpath 'com.android.tools.build:gradle:7.2.1'
+        classpath 'com.google.gms:google-services:4.3.13'
     }
-    
 }
+
 allprojects {
     repositories {
-        maven { url 'https://maven.aliyun.com/repository/public/' } 
-        maven { url 'https://maven.aliyun.com/repository/google/' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
-        maven { url 'https://dl.bintray.com/ppartisan/maven/' }
-        maven { url "https://clojars.org/repo/" }
-        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
         mavenLocal()
         mavenCentral()
         google()
