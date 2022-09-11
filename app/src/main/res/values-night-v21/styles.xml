@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="BaseTheme" parent="@android:style/Theme.Material">
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 </resources>

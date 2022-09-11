@@ -2,13 +2,13 @@
 <resources>
     <string name="app_name" translateable="false">My Arch</string>
     <string name="close">Close</string>
-    <string name="check">Check</string>
+    <string name="check">View Supported ABIs</string>
     <string name="about">About Us</string>
-    <string name="about_description" formatted="false">This application is developed and maintained by</string>
+    <string name="device">You device is %s</string>
+    <string name="about_description">This application is developed and maintained by</string>
     <string name="icons_by">All icons used in this app are taken from</string>
     <string name="thnaks">Thank your for using %s.</string>
     <string name="more_info">More Info</string>
-    <string name="checkInfo">Click on \"Check\" button to see which ABIs are supported in your device</string>
     <string name="armeabi_info">This ABI is for ARM-based CPUs that support at least the ARMv5TE instruction set. This is a very old version, the lack of hardware support for floating-point calculations, there are performance bottlenecks when you need a lot of computing\n\nSupported ABIs:\n● armeabi</string>
     <string name="mips64_info">This ABI is for MIPS64 R6. It is rarely used in mobile phones, can be ignored\n\nSupported ABIs:\n● mips64\n● mips</string>
     <string name="mips_info">This ABI is for MIPS-based CPUs that support at least the MIPS32r1 instruction set. It is rarely used in mobile phones, can be ignored\n\nSupported ABIs:\n● mips</string>

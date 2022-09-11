@@ -34,6 +34,6 @@
         android:textSize="18dp"
         android:maxLines="1"
 		android:textColor="@color/textColorSecondary"
-        android:text="CPU Viewer"
+        android:text="Device Info"
         android:ellipsize="end" />
 </LinearLayout>
