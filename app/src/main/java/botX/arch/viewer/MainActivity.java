@@ -76,7 +76,8 @@ public class MainActivity extends Activity {
             
         try {
             BufferedReader localBufferedReader = new BufferedReader(new FileReader("/proc/cpuinfo"));
-            bit = bit.concat(", ".concat(localBufferedReader.readLine()));
+            String[] processor = localBufferedReader.readLine().trim().split(":");
+            bit = bit.concat(", ".concat(processor[1].trim()));
             localBufferedReader.close();
         } catch (Exception e) {
         }
