@@ -1,6 +1,10 @@
+-dontpreverify
+-repackageclasses "IIII"
+-dontshrink
+-dontskipnonpubliclibraryclasses
+-allowaccessmodification
 -obfuscationdictionary obfuscation.txt
 -classobfuscationdictionary obfuscation.txt
 -packageobfuscationdictionary obfuscation.txt
--keepattributes SourceFile, !LineNumberTable, !Signature, !Exceptions, !InnerClasses, !EnclosingMethod
+-keepattributes SourceFile, *Annotation*
 -renamesourcefileattribute BotX
--dontshrink
