@@ -21,14 +21,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="10dp" />
-        <RowLayout
+        <botX.widget.RowLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:horizontalSpacing="10dp"
             android:verticalSpacing="10dp"
             android:layout_marginBottom="15dp"
             android:layout_gravity="center_horizontal">
-            <MCheckBox
+            <botX.widget.MCheckBox
                 android:id="@+id/arm64"
                 android:layout_margin="8dp"
                 android:text="arm64-v8a"
@@ -36,9 +36,9 @@
                 android:textColor="@color/textColorPrimary"
                 android:textSize="14sp"
                 android:gravity="center"
-				android:layout_gravity="center"
+                android:layout_gravity="center"
                 android:layout_height="110dp" />
-            <MCheckBox
+            <botX.widget.MCheckBox
                 android:id="@+id/arm7"
                 android:layout_margin="8dp"
                 android:text="armeabi-v7a"
@@ -46,9 +46,9 @@
                 android:textColor="@color/textColorPrimary"
                 android:textSize="14sp"
                 android:gravity="center"
-				android:layout_gravity="center"
+                android:layout_gravity="center"
                 android:layout_height="110dp" />
-            <MCheckBox
+            <botX.widget.MCheckBox
                 android:id="@+id/arm"
                 android:layout_margin="8dp"
                 android:text="armeabi"
@@ -56,9 +56,9 @@
                 android:textColor="@color/textColorPrimary"
                 android:textSize="14sp"
                 android:gravity="center"
-				android:layout_gravity="center"
+                android:layout_gravity="center"
                 android:layout_height="100dp" />
-            <MCheckBox
+            <botX.widget.MCheckBox
                 android:id="@+id/x86"
                 android:layout_margin="8dp"
                 android:text="x86"
@@ -66,9 +66,9 @@
                 android:textColor="@color/textColorPrimary"
                 android:textSize="14sp"
                 android:gravity="center"
-				android:layout_gravity="center"
+                android:layout_gravity="center"
                 android:layout_height="100dp" />
-            <MCheckBox
+            <botX.widget.MCheckBox
                 android:id="@+id/x86_64"
                 android:layout_margin="8dp"
                 android:text="x86_64"
@@ -76,9 +76,9 @@
                 android:textColor="@color/textColorPrimary"
                 android:textSize="14sp"
                 android:gravity="center"
-				android:layout_gravity="center"
+                android:layout_gravity="center"
                 android:layout_height="100dp" />
-            <MCheckBox
+            <botX.widget.MCheckBox
                 android:id="@+id/mips"
                 android:layout_margin="8dp"
                 android:text="mips"
@@ -86,9 +86,9 @@
                 android:textColor="@color/textColorPrimary"
                 android:textSize="14sp"
                 android:gravity="center"
-				android:layout_gravity="center"
+                android:layout_gravity="center"
                 android:layout_height="100dp" />
-            <MCheckBox
+            <botX.widget.MCheckBox
                 android:id="@+id/mips64"
                 android:layout_margin="8dp"
                 android:text="mips64"
@@ -96,9 +96,9 @@
                 android:textColor="@color/textColorPrimary"
                 android:textSize="14sp"
                 android:gravity="center"
-				android:layout_gravity="center"
+                android:layout_gravity="center"
                 android:layout_height="100dp" />
-        </RowLayout>
+        </botX.widget.RowLayout>
         <Button 
             android:id="@+id/check"
             android:layout_margin="8dp"

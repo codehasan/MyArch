@@ -16,7 +16,7 @@ public class TypefaceSpan extends MetricAffectingSpan {
     public TypefaceSpan(Context context, String typefaceName) {
         mTypeface = sTypefaceCache.get(typefaceName);
         if (mTypeface == null) {
-            mTypeface = Typeface.createFromAsset(context.getApplicationContext()
+            mTypeface = Typeface.createFromAsset(context
                                                  .getAssets(), typefaceName);
             sTypefaceCache.put(typefaceName, mTypeface);
         }

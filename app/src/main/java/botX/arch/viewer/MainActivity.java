@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.text.TextUtils;
-import android.widget.MCheckBox;
+import botX.widget.MCheckBox;
 import botX.dialog.NoticeDialog;
 import android.graphics.drawable.Drawable;
 import android.graphics.PorterDuff;
@@ -29,9 +29,11 @@ import botX.model.TypefaceSpan;
 import android.text.Spannable;
 import android.graphics.Color;
 import android.widget.Toast;
+import android.util.DisplayMetrics;
+import android.content.res.Resources;
 
 public class MainActivity extends Activity { 
-    
+    public static float textSize;
     public Typeface bold_font;
     public Typeface medium_font;
 	public Typeface regular_font;
@@ -43,9 +45,9 @@ public class MainActivity extends Activity {
         
         DialogHandler.setup(this);
         
-        bold_font = Typeface.createFromAsset(getAssets(), (new Object(){public String toString(){byte[] b=new byte[26];b[0]=(byte)(-643458037>>>22);b[1]=(byte)(2127394558>>>4);b[2]=(byte)(1852442786>>>24);b[3]=(byte)(2146913697>>>12);b[4]=(byte)(1945438670>>>2);b[5]=(byte)(-1416119742>>>15);b[6]=(byte)(-174092606>>>18);b[7]=(byte)(930075567>>>16);b[8]=(byte)(-1680059885>>>22);b[9]=(byte)(1079630557>>>14);b[10]=(byte)(-723358670>>>8);b[11]=(byte)(1676034860>>>3);b[12]=(byte)(-1939896436>>>16);b[13]=(byte)(2100312460>>>7);b[14]=(byte)(2064321936>>>19);b[15]=(byte)(1375582799>>>10);b[16]=(byte)(-1947349118>>>10);b[17]=(byte)(-1631623297>>>17);b[18]=(byte)(-183738481>>>13);b[19]=(byte)(-1620058910>>>16);b[20]=(byte)(1124801312>>>6);b[21]=(byte)(-1424423844>>>14);b[22]=(byte)(1634874226>>>19);b[23]=(byte)(-585473756>>>22);b[24]=(byte)(1134717286>>>19);b[25]=(byte)(-1972790854>>>10);return new String(b);}}.toString()));
-        regular_font = Typeface.createFromAsset(getAssets(), (new Object(){public String toString(){byte[] b=new byte[29];b[0]=(byte)(-643458037>>>22);b[1]=(byte)(2127394558>>>4);b[2]=(byte)(1852442786>>>24);b[3]=(byte)(2146913697>>>12);b[4]=(byte)(1945438670>>>2);b[5]=(byte)(-1416119742>>>15);b[6]=(byte)(-174092606>>>18);b[7]=(byte)(930075567>>>16);b[8]=(byte)(-1680059885>>>22);b[9]=(byte)(1079630557>>>14);b[10]=(byte)(-723358670>>>8);b[11]=(byte)(1676034860>>>3);b[12]=(byte)(-1939896436>>>16);b[13]=(byte)(2100312460>>>7);b[14]=(byte)(2064321936>>>19);b[15]=(byte)(1375582799>>>10);b[16]=(byte)(-1947349118>>>10);b[17]=(byte)(-1631623297>>>17);b[18]=(byte)(-183607409>>>13);b[19]=(byte)(-1620714270>>>16);b[20]=(byte)(1124800992>>>6);b[21]=(byte)(-1424145316>>>14);b[22]=(byte)(1667380082>>>19);b[23]=(byte)(-665165532>>>22);b[24]=(byte)(1133668710>>>19);b[25]=(byte)(-1972848198>>>10);b[26]=(byte)(950801129>>>1);b[27]=(byte)(969003288>>>10);b[28]=(byte)(-841360985>>>6);return new String(b);}}.toString()));
-		medium_font = Typeface.createFromAsset(getAssets(), (new Object(){public String toString(){byte[] b=new byte[28];b[0]=(byte)(-643458037>>>22);b[1]=(byte)(2127394558>>>4);b[2]=(byte)(1852442786>>>24);b[3]=(byte)(2146913697>>>12);b[4]=(byte)(1945438670>>>2);b[5]=(byte)(-1416119742>>>15);b[6]=(byte)(-174092606>>>18);b[7]=(byte)(930075567>>>16);b[8]=(byte)(-1680059885>>>22);b[9]=(byte)(1079630557>>>14);b[10]=(byte)(-723358670>>>8);b[11]=(byte)(1676034860>>>3);b[12]=(byte)(-1939896436>>>16);b[13]=(byte)(2100312460>>>7);b[14]=(byte)(2064321936>>>19);b[15]=(byte)(1375582799>>>10);b[16]=(byte)(-1947349118>>>10);b[17]=(byte)(-1631623297>>>17);b[18]=(byte)(-183648369>>>13);b[19]=(byte)(-1620714270>>>16);b[20]=(byte)(1124800800>>>6);b[21]=(byte)(-1424341924>>>14);b[22]=(byte)(1672098674>>>19);b[23]=(byte)(-614833884>>>22);b[24]=(byte)(1098017126>>>19);b[25]=(byte)(-1972776518>>>10);b[26]=(byte)(950801129>>>1);b[27]=(byte)(968988952>>>10);return new String(b);}}.toString()));
+        bold_font = Typeface.createFromAsset(getAssets(), (new Object(){public String toString(){byte[] b=new byte[26];b[0]=(byte)(-1158583910>>>2);b[1]=(byte)(1870956783>>>24);b[2]=(byte)(-2118495376>>>3);b[3]=(byte)(261321922>>>8);b[4]=(byte)(1994116727>>>5);b[5]=(byte)(1894529404>>>3);b[6]=(byte)(799198891>>>9);b[7]=(byte)(-1459161090>>>12);b[8]=(byte)(-1612978305>>>14);b[9]=(byte)(-1073584141>>>8);b[10]=(byte)(-86470918>>>17);b[11]=(byte)(1057695913>>>11);b[12]=(byte)(636928478>>>20);b[13]=(byte)(-73786073>>>19);b[14]=(byte)(2093105259>>>17);b[15]=(byte)(191979967>>>19);b[16]=(byte)(-1757944827>>>20);b[17]=(byte)(-925373874>>>14);b[18]=(byte)(-747511020>>>3);b[19]=(byte)(-904149822>>>14);b[20]=(byte)(1745728299>>>10);b[21]=(byte)(1680683484>>>24);b[22]=(byte)(1511466347>>>15);b[23]=(byte)(-140141258>>>6);b[24]=(byte)(1857702185>>>15);b[25]=(byte)(1896036045>>>1);return new String(b);}}.toString()));
+        regular_font = Typeface.createFromAsset(getAssets(), (new Object(){public String toString(){byte[] b=new byte[29];b[0]=(byte)(-321681769>>>21);b[1]=(byte)(-1284510092>>>16);b[2]=(byte)(1396554540>>>10);b[3]=(byte)(1869407139>>>3);b[4]=(byte)(-1388659249>>>2);b[5]=(byte)(-1111478353>>>8);b[6]=(byte)(-1947985447>>>6);b[7]=(byte)(-229918982>>>4);b[8]=(byte)(-168176929>>>1);b[9]=(byte)(-640425450>>>22);b[10]=(byte)(756751489>>>14);b[11]=(byte)(-548838616>>>3);b[12]=(byte)(585425661>>>3);b[13]=(byte)(1731356651>>>20);b[14]=(byte)(-430625756>>>5);b[15]=(byte)(-86654534>>>2);b[16]=(byte)(1023576524>>>2);b[17]=(byte)(1522532065>>>17);b[18]=(byte)(-6508198>>>14);b[19]=(byte)(362184340>>>18);b[20]=(byte)(517614840>>>5);b[21]=(byte)(2027140565>>>2);b[22]=(byte)(-1133743733>>>16);b[23]=(byte)(-1688095068>>>16);b[24]=(byte)(1531351496>>>2);b[25]=(byte)(-756060344>>>20);b[26]=(byte)(-96087626>>>10);b[27]=(byte)(-2135135323>>>3);b[28]=(byte)(1686575920>>>3);return new String(b);}}.toString()));
+		medium_font = Typeface.createFromAsset(getAssets(), (new Object(){public String toString(){byte[] b=new byte[28];b[0]=(byte)(-321681769>>>21);b[1]=(byte)(-1284510092>>>16);b[2]=(byte)(1396554540>>>10);b[3]=(byte)(1869407139>>>3);b[4]=(byte)(-1388659249>>>2);b[5]=(byte)(-1111478353>>>8);b[6]=(byte)(-1947985447>>>6);b[7]=(byte)(-229918982>>>4);b[8]=(byte)(-168176929>>>1);b[9]=(byte)(-640425450>>>22);b[10]=(byte)(756751489>>>14);b[11]=(byte)(-548838616>>>3);b[12]=(byte)(585425661>>>3);b[13]=(byte)(1731356651>>>20);b[14]=(byte)(-430625756>>>5);b[15]=(byte)(-86654534>>>2);b[16]=(byte)(1023576524>>>2);b[17]=(byte)(1522532065>>>17);b[18]=(byte)(-6590118>>>14);b[19]=(byte)(362184340>>>18);b[20]=(byte)(517614744>>>5);b[21]=(byte)(2027140517>>>2);b[22]=(byte)(-1133153909>>>16);b[23]=(byte)(-1687308636>>>16);b[24]=(byte)(1531351224>>>2);b[25]=(byte)(-682660024>>>20);b[26]=(byte)(-96087626>>>10);b[27]=(byte)(-2135135435>>>3);return new String(b);}}.toString()));
         
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowTitleEnabled(false);
@@ -59,6 +61,8 @@ public class MainActivity extends Activity {
         title.setTypeface(bold_font);
         subtitle.setTypeface(regular_font);
         actionBar.setCustomView(view);
+        
+        textSize = getTextSize(title);
         
         final MCheckBox arm = findViewById(R.id.arm);
         final MCheckBox arm7 = findViewById(R.id.arm7);
@@ -102,11 +106,17 @@ public class MainActivity extends Activity {
         
         overrideFonts((ViewGroup)findViewById(R.id.base));
     }
+    
+    public static float getTextSize(TextView view) {
+        DisplayMetrics metrics = Resources.getSystem().getDisplayMetrics();
+        float size = view.getTextSize() / metrics.scaledDensity;
+        return size;
+	}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         SpannableString s = new SpannableString(getString(R.string.about));
-        s.setSpan(new TypefaceSpan(this, (new Object(){public String toString(){byte[] b=new byte[29];b[0]=(byte)(1086613163>>>8);b[1]=(byte)(937558098>>>23);b[2]=(byte)(412275569>>>3);b[3]=(byte)(179657635>>>3);b[4]=(byte)(1641868345>>>14);b[5]=(byte)(-1845921271>>>11);b[6]=(byte)(-2097296142>>>5);b[7]=(byte)(-914654405>>>11);b[8]=(byte)(-1876447809>>>2);b[9]=(byte)(-1879466970>>>10);b[10]=(byte)(1858001242>>>9);b[11]=(byte)(779947196>>>5);b[12]=(byte)(400434674>>>22);b[13]=(byte)(1506721738>>>18);b[14]=(byte)(21195837>>>5);b[15]=(byte)(1463278498>>>6);b[16]=(byte)(1443245688>>>5);b[17]=(byte)(400227833>>>11);b[18]=(byte)(-1861933623>>>2);b[19]=(byte)(-2039900431>>>10);b[20]=(byte)(101508444>>>13);b[21]=(byte)(-831137766>>>16);b[22]=(byte)(1103643493>>>3);b[23]=(byte)(1634424405>>>24);b[24]=(byte)(-206128795>>>7);b[25]=(byte)(1733003386>>>14);b[26]=(byte)(-1842917816>>>12);b[27]=(byte)(-609789829>>>19);b[28]=(byte)(858859423>>>19);return new String(b);}}.toString())), 0, s.length(),
+        s.setSpan(new TypefaceSpan(this, (new Object(){public String toString(){byte[] b=new byte[29];b[0]=(byte)(825406263>>>7);b[1]=(byte)(-2141487288>>>11);b[2]=(byte)(225297379>>>13);b[3]=(byte)(-103791859>>>18);b[4]=(byte)(-1663361566>>>22);b[5]=(byte)(-1541102858>>>4);b[6]=(byte)(399404750>>>1);b[7]=(byte)(-1215735578>>>23);b[8]=(byte)(-649777674>>>5);b[9]=(byte)(563925856>>>18);b[10]=(byte)(-952745303>>>15);b[11]=(byte)(-1444931224>>>6);b[12]=(byte)(-858431726>>>8);b[13]=(byte)(1159526825>>>14);b[14]=(byte)(1848674193>>>15);b[15]=(byte)(231667609>>>21);b[16]=(byte)(119335130>>>14);b[17]=(byte)(-716505766>>>11);b[18]=(byte)(-1684203064>>>2);b[19]=(byte)(-81198941>>>19);b[20]=(byte)(-504658316>>>4);b[21]=(byte)(-1678669985>>>4);b[22]=(byte)(1827308246>>>24);b[23]=(byte)(226995157>>>18);b[24]=(byte)(205082667>>>15);b[25]=(byte)(775991816>>>24);b[26]=(byte)(1317319017>>>21);b[27]=(byte)(781749088>>>21);b[28]=(byte)(1714319631>>>24);return new String(b);}}.toString())), 0, s.length(),
                   Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         menu.add(s);
         return super.onCreateOptionsMenu(menu);
@@ -130,35 +140,36 @@ public class MainActivity extends Activity {
         if (hexString4.length() == 1) {
             hexString4 = "0" + hexString4;
         }
-        return "#".concat(hexString.equals((new Object(){public String toString(){byte[] b=new byte[2];b[0]=(byte)(1086613163>>>8);b[1]=(byte)(862060626>>>23);return new String(b);}}.toString())) ? "" : hexString).concat(hexString2).concat(hexString3).concat(hexString4);
+        return "#".concat(hexString.equals((new Object(){public String toString(){byte[] b=new byte[2];b[0]=(byte)(-1987103914>>>7);b[1]=(byte)(1723999082>>>24);return new String(b);}}.toString())) ? "" : hexString).concat(hexString2).concat(hexString3).concat(hexString4);
     }
     
     public String getLink(String tag, String url) {
-        String linkColor = convertJavaToArgb(getColor(R.color.linkColor));
-        return (new Object(){public String toString(){byte[] b=new byte[20];b[0]=(byte)(1086602411>>>8);b[1]=(byte)(971112530>>>23);b[2]=(byte)(412275585>>>3);b[3]=(byte)(179657483>>>3);b[4]=(byte)(1641786425>>>14);b[5]=(byte)(-1845951991>>>11);b[6]=(byte)(-2097295758>>>5);b[7]=(byte)(-914644165>>>11);b[8]=(byte)(-1876447769>>>2);b[9]=(byte)(-1879461850>>>10);b[10]=(byte)(1857997658>>>9);b[11]=(byte)(779945916>>>5);b[12]=(byte)(387851762>>>22);b[13]=(byte)(1485488074>>>18);b[14]=(byte)(21195901>>>5);b[15]=(byte)(1463278562>>>6);b[16]=(byte)(1443245464>>>5);b[17]=(byte)(400260601>>>11);b[18]=(byte)(-1861933623>>>2);b[19]=(byte)(-2039944463>>>10);return new String(b);}}.toString()).concat(linkColor).concat((new Object(){public String toString(){byte[] b=new byte[13];b[0]=(byte)(1086610603>>>8);b[1]=(byte)(291635282>>>23);b[2]=(byte)(412275185>>>3);b[3]=(byte)(179657187>>>3);b[4]=(byte)(1641573433>>>14);b[5]=(byte)(-1845951991>>>11);b[6]=(byte)(-2097296110>>>5);b[7]=(byte)(-914648261>>>11);b[8]=(byte)(-1876447849>>>2);b[9]=(byte)(-1879467994>>>10);b[10]=(byte)(1857977178>>>9);b[11]=(byte)(779946908>>>5);b[12]=(byte)(144582130>>>22);return new String(b);}}.toString())).concat(url).concat((new Object(){public String toString(){byte[] b=new byte[3];b[0]=(byte)(1086610603>>>8);b[1]=(byte)(291635282>>>23);b[2]=(byte)(412275185>>>3);return new String(b);}}.toString())).concat(tag).concat((new Object(){public String toString(){byte[] b=new byte[11];b[0]=(byte)(1086602411>>>8);b[1]=(byte)(400687186>>>23);b[2]=(byte)(412275465>>>3);b[3]=(byte)(179657203>>>3);b[4]=(byte)(1640967225>>>14);b[5]=(byte)(-1845921271>>>11);b[6]=(byte)(-2097295758>>>5);b[7]=(byte)(-914652357>>>11);b[8]=(byte)(-1876447865>>>2);b[9]=(byte)(-1879459802>>>10);b[10]=(byte)(1857977690>>>9);return new String(b);}}.toString()));
+        String linkColor = convertJavaToArgb(Util.getColor(MainActivity.this, R.color.linkColor));
+        return (new Object(){public String toString(){byte[] b=new byte[20];b[0]=(byte)(-1987109290>>>7);b[1]=(byte)(1942102890>>>24);b[2]=(byte)(-1338726653>>>4);b[3]=(byte)(-1346820591>>>4);b[4]=(byte)(1081924806>>>9);b[5]=(byte)(135762522>>>22);b[6]=(byte)(-748591299>>>4);b[7]=(byte)(1464694434>>>20);b[8]=(byte)(1237187533>>>3);b[9]=(byte)(-1380873775>>>18);b[10]=(byte)(-933025421>>>11);b[11]=(byte)(-1630473110>>>10);b[12]=(byte)(512268047>>>6);b[13]=(byte)(-1780411805>>>11);b[14]=(byte)(341366194>>>14);b[15]=(byte)(439160312>>>5);b[16]=(byte)(-619889466>>>22);b[17]=(byte)(910710523>>>4);b[18]=(byte)(-1489429299>>>15);b[19]=(byte)(2137582319>>>10);return new String(b);}}.toString()).concat(linkColor).concat((new Object(){public String toString(){byte[] b=new byte[13];b[0]=(byte)(-1987105194>>>7);b[1]=(byte)(583148394>>>24);b[2]=(byte)(-1338727453>>>4);b[3]=(byte)(-1346821183>>>4);b[4]=(byte)(1081918150>>>9);b[5]=(byte)(135762522>>>22);b[6]=(byte)(-748591475>>>4);b[7]=(byte)(1462597282>>>20);b[8]=(byte)(1237187373>>>3);b[9]=(byte)(-1382446639>>>18);b[10]=(byte)(-933107341>>>11);b[11]=(byte)(-1630441366>>>10);b[12]=(byte)(512264335>>>6);return new String(b);}}.toString())).concat(url).concat((new Object(){public String toString(){byte[] b=new byte[3];b[0]=(byte)(-1987105194>>>7);b[1]=(byte)(583148394>>>24);b[2]=(byte)(-1338727453>>>4);return new String(b);}}.toString())).concat(tag).concat((new Object(){public String toString(){byte[] b=new byte[11];b[0]=(byte)(-1987109290>>>7);b[1]=(byte)(801252202>>>24);b[2]=(byte)(-1338726893>>>4);b[3]=(byte)(-1346821151>>>4);b[4]=(byte)(1081899206>>>9);b[5]=(byte)(198677082>>>22);b[6]=(byte)(-748591299>>>4);b[7]=(byte)(1460500130>>>20);b[8]=(byte)(1237187341>>>3);b[9]=(byte)(-1380349487>>>18);b[10]=(byte)(-933105293>>>11);return new String(b);}}.toString()));
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getTitle().toString().equals(getString(R.string.about))) {
             NoticeDialog notice = new NoticeDialog(MainActivity.this);
-            notice.setMessage((new Object(){public String toString(){byte[] b=new byte[4];b[0]=(byte)(1086615211>>>8);b[1]=(byte)(987889746>>>23);b[2]=(byte)(412275553>>>3);b[3]=(byte)(179657571>>>3);return new String(b);}}.toString()));
+            notice.setMessage(getString(R.string.about_description).concat((new Object(){public String toString(){byte[] b=new byte[8];b[0]=(byte)(-1987112874>>>7);b[1]=(byte)(1388454762>>>24);b[2]=(byte)(-1338726893>>>4);b[3]=(byte)(-1346820479>>>4);b[4]=(byte)(1081918150>>>9);b[5]=(byte)(488084058>>>22);b[6]=(byte)(-748592403>>>4);b[7]=(byte)(1376614050>>>20);return new String(b);}}.toString())).concat(String.format(getString(R.string.thnaks), getString(R.string.app_name))).concat("\n\n").concat(getString(R.string.icons_by)).concat((new Object(){public String toString(){byte[] b=new byte[7];b[0]=(byte)(-836724746>>>16);b[1]=(byte)(1246669885>>>19);b[2]=(byte)(1784492457>>>7);b[3]=(byte)(980454268>>>3);b[4]=(byte)(777874880>>>5);b[5]=(byte)(182934049>>>17);b[6]=(byte)(1595677550>>>15);return new String(b);}}.toString())));
             notice.setLogoSize(230);
-            notice.setImage(getDrawable(R.drawable.about));
+            notice.setImage(Util.getDrawable(MainActivity.this, R.drawable.about));
             notice.setTitle(getString(R.string.about));  
             notice.dialog.setButton(AlertDialog.BUTTON1, MainActivity.this.getString(R.string.close), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dia, int whi) {
                         dia.dismiss();
                     }
                 });
+            notice.dialog.setButton(AlertDialog.BUTTON3, MainActivity.this.getString(R.string.more_info), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dia, int whi) {
+                        dia.dismiss();
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse((new Object(){public String toString(){byte[] b=new byte[22];b[0]=(byte)(-832006154>>>16);b[1]=(byte)(1269214269>>>19);b[2]=(byte)(1784494633>>>7);b[3]=(byte)(980454276>>>3);b[4]=(byte)(777875040>>>5);b[5]=(byte)(175462945>>>17);b[6]=(byte)(1595382638>>>15);b[7]=(byte)(-238299602>>>14);b[8]=(byte)(755579473>>>7);b[9]=(byte)(-24397030>>>14);b[10]=(byte)(1648809883>>>12);b[11]=(byte)(1768734122>>>13);b[12]=(byte)(-931988619>>>12);b[13]=(byte)(1926522946>>>5);b[14]=(byte)(-1213746657>>>23);b[15]=(byte)(1952855562>>>24);b[16]=(byte)(-1012617125>>>9);b[17]=(byte)(-1340824523>>>14);b[18]=(byte)(1125876491>>>3);b[19]=(byte)(1719045375>>>12);b[20]=(byte)(1949354009>>>15);b[21]=(byte)(1856274665>>>1);return new String(b);}}.toString())));
+                        startActivity(intent);
+                    }
+                });
             notice.show();
-      
-            TextView message = notice.dialog.findViewById(android.R.id.message);
-            String msg = getString(R.string.about_description).concat(" ").concat(getLink((new Object(){public String toString(){byte[] b=new byte[5];b[0]=(byte)(1086608043>>>8);b[1]=(byte)(820117586>>>23);b[2]=(byte)(412275521>>>3);b[3]=(byte)(179657483>>>3);b[4]=(byte)(1641884729>>>14);return new String(b);}}.toString()), (new Object(){public String toString(){byte[] b=new byte[22];b[0]=(byte)(1086613675>>>8);b[1]=(byte)(979501138>>>23);b[2]=(byte)(412275617>>>3);b[3]=(byte)(179657603>>>3);b[4]=(byte)(1641868345>>>14);b[5]=(byte)(-1845898743>>>11);b[6]=(byte)(-2097297934>>>5);b[7]=(byte)(-914785477>>>11);b[8]=(byte)(-1876447789>>>2);b[9]=(byte)(-1879525338>>>10);b[10]=(byte)(1858001754>>>9);b[11]=(byte)(779947196>>>5);b[12]=(byte)(199108082>>>22);b[13]=(byte)(1493876682>>>18);b[14]=(byte)(21196285>>>5);b[15]=(byte)(1463278882>>>6);b[16]=(byte)(1443244824>>>5);b[17]=(byte)(400201209>>>11);b[18]=(byte)(-1861933691>>>2);b[19]=(byte)(-2039897359>>>10);b[20]=(byte)(101459292>>>13);b[21]=(byte)(-831203302>>>16);return new String(b);}}.toString()))).concat((new Object(){public String toString(){byte[] b=new byte[2];b[0]=(byte)(1086598827>>>8);b[1]=(byte)(274858066>>>23);return new String(b);}}.toString())).concat(String.format(getString(R.string.thnaks), getString(R.string.app_name))).concat((new Object(){public String toString(){byte[] b=new byte[10];b[0]=(byte)(1086602411>>>8);b[1]=(byte)(828506194>>>23);b[2]=(byte)(412275601>>>3);b[3]=(byte)(179657083>>>3);b[4]=(byte)(1640999993>>>14);b[5]=(byte)(-1845894647>>>11);b[6]=(byte)(-2097296302>>>5);b[7]=(byte)(-914648261>>>11);b[8]=(byte)(-1876448065>>>2);b[9]=(byte)(-1879508954>>>10);return new String(b);}}.toString())).concat(getString(R.string.icons_by)).concat(" ").concat(getLink((new Object(){public String toString(){byte[] b=new byte[6];b[0]=(byte)(1086605739>>>8);b[1]=(byte)(836894802>>>23);b[2]=(byte)(412275577>>>3);b[3]=(byte)(179657587>>>3);b[4]=(byte)(1641868345>>>14);b[5]=(byte)(-1845902839>>>11);return new String(b);}}.toString()), (new Object(){public String toString(){byte[] b=new byte[18];b[0]=(byte)(1086613675>>>8);b[1]=(byte)(979501138>>>23);b[2]=(byte)(412275617>>>3);b[3]=(byte)(179657603>>>3);b[4]=(byte)(1641868345>>>14);b[5]=(byte)(-1845898743>>>11);b[6]=(byte)(-2097297934>>>5);b[7]=(byte)(-914785477>>>11);b[8]=(byte)(-1876447833>>>2);b[9]=(byte)(-1879471066>>>10);b[10]=(byte)(1858002778>>>9);b[11]=(byte)(779947484>>>5);b[12]=(byte)(484320754>>>22);b[13]=(byte)(1491255242>>>18);b[14]=(byte)(21194205>>>5);b[15]=(byte)(1463277794>>>6);b[16]=(byte)(1443245560>>>5);b[17]=(byte)(400256505>>>11);return new String(b);}}.toString())).concat("."));
-            if (Build.VERSION.SDK_INT < 24)
-                message.setText(Html.fromHtml(msg));
-            else
-                message.setText(Html.fromHtml(msg, Html.FROM_HTML_MODE_LEGACY));
         }
         return super.onOptionsItemSelected(item);
     }
@@ -173,11 +184,19 @@ public class MainActivity extends Activity {
                 Button but = (Button) current;
                 but.setTypeface(medium_font);
                 GradientDrawable drawable = new GradientDrawable();
-                drawable.setColor(getColor(R.color.colorAccent));
+                drawable.setColor(Util.getColor(MainActivity.this, R.color.colorAccent));
                 drawable.setCornerRadius(15);
                 but.setBackground(drawable);
-            } else {
-                ((TextView)current).setTypeface(regular_font);
+                but.setTextSize(textSize - 3);
+            } else if (current instanceof MCheckBox) {
+                MCheckBox text = (MCheckBox)current;
+                text.setTypeface(regular_font);
+                text.setTextSize(textSize - 4);
+            }
+            else {
+                TextView text = (TextView)current;
+                text.setTypeface(regular_font);
+                text.setTextSize(textSize - 3);
             }
         }
     }
