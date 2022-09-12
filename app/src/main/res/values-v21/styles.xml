@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="BaseTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
     <style name="AppTheme" parent="@style/BaseTheme">
         <item name="android:forceDarkAllowed">false</item>

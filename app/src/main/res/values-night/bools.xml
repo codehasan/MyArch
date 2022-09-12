@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <bool name="light_statusBar">false</bool>
+    <bool name="night">true</bool>
 </resources>
