@@ -23,4 +23,12 @@
 </h1>
  - Icons by <a target="_blank" href="https://icons8.com/icon/">Icons8</a>
 
+<h1 align="left">
+  <b>&nbsp;License</b>
+</h1>
+
+[![License](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)](LICENSE)
+<br/><br/>
+MyArch is licensed under [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.html) v3 or later.
+
 ---
