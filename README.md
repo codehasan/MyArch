@@ -13,10 +13,10 @@
   <b>&nbsp;Screenshots</b>
 </h1>
 <div align="center">
-<a href="./.resources/images/screenshot_1.png"><img width="140" height="249" src="resources/screenshot_1.webp"></a>
-<a href="./.resources/images/screenshot_2.png"><img width="140" height="249" src="resources/screenshot_2.webp"></a>
-<a href="./.resources/images/screenshot_3.png"><img width="140" height="249" src="resources/screenshot_3.webp"></a>
-<a href="./.resources/images/screenshot_4.png"><img width="140" height="249" src="resources/screenshot_4.webp"></a>
+<a href="resources/screenshot_1.webp"><img width="140" height="249" src="resources/screenshot_1.webp"></a>
+<a href="resources/screenshot_2.webp"><img width="140" height="249" src="resources/screenshot_2.webp"></a>
+<a href="resources/screenshot_3.webp"><img width="140" height="249" src="resources/screenshot_3.webp"></a>
+<a href="resources/screenshot_4.webp"><img width="140" height="249" src="resources/screenshot_4.webp"></a>
 </div>
 <h1 align="left">
   <b>&nbsp;Credits</b>
