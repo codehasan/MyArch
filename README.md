@@ -7,10 +7,24 @@
 </h1>
  <div align="center">
         <img src="https://img.shields.io/badge/Android-5.0%20and%20up-brightgreen?logo=android&logoColor=white" alt="SDK" />
-    <p>An android application which can show all suported abis of the running device</p>
+    <p>An android application which can show all suported ABIs of the running device</p>
 </div>
 <h1 align="left">
-  <b>&nbsp;Screenshots</b>
+  <b>What is ABI?</b>
+</h1>
+<div align="left">
+    Different Android devices use different CPUs, which in turn support different instruction sets. Each combination of CPU and instruction set has its own Application Binary Interface (ABI). An ABI includes the following information: The CPU instruction set (and extensions) that can be used.
+</div>
+<h1 align="left">
+    Built wtih
+</h1>
+<div align="left">
+
+* ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+    
+</div>
+<h1 align="left">
+  <b>Screenshots</b>
 </h1>
 <div align="center">
 <a href="resources/screenshot_1.webp"><img width="140" height="249" src="resources/screenshot_1.webp"></a>
