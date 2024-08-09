@@ -1,3 +1,13 @@
+<div align="center">
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
+</div>
+
 <p align="center">
     <img height=150 width=150 src="resources/icon.webp"
 </p>
@@ -6,7 +16,6 @@
   <b>MyArch</b>
 </h1>
  <div align="center">
-        <img src="https://img.shields.io/badge/Android-5.0%20and%20up-brightgreen?logo=android&logoColor=white" alt="SDK" />
     <p>An android application which can show all suported ABIs of the running device</p>
 </div>
 <h1 align="left">
@@ -46,3 +55,15 @@
 MyArch is licensed under [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.html) v3 or later.
 
 ---
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/codehasan/MyArch.svg?style=for-the-badge
+[contributors-url]: https://github.com/codehasan/MyArch/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/codehasan/MyArch.svg?style=for-the-badge
+[forks-url]: https://github.com/codehasan/MyArch/network/members
+[stars-shield]: https://img.shields.io/github/stars/codehasan/MyArch.svg?style=for-the-badge
+[stars-url]: https://github.com/codehasan/MyArch/stargazers
+[issues-shield]: https://img.shields.io/github/issues/codehasan/MyArch.svg?style=for-the-badge
+[issues-url]: https://github.com/codehasan/MyArch/issues
+[license-shield]: https://img.shields.io/github/license/codehasan/MyArch.svg?style=for-the-badge
+[license-url]: https://github.com/codehasan/MyArch/blob/master/LICENSE.txt
